@@ -11,6 +11,8 @@ function comprar() {
     // Verificando se a quantidade informada pelo usuário é válida
     if (isNaN(quantidade) || quantidade <= 0) {
         alert('Digite um número válido.');
+        qtdInput.value = '';
+        qtdInput.focus();
         return;
     }
     // Limitando a compra a 10 ingressos por tentativa
@@ -50,7 +52,6 @@ function comprar() {
             return;
         }
     }
-
     qtdInput.value = '';
     qtdInput.focus();
 }
